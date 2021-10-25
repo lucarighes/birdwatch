@@ -1,20 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Layout from './components/layout';
+import Graph from './components/graph';
+
 
 function App() {
 
-  const [test, setTest] = useState();
-
-  useEffect(() => {
-    fetch('/name')
-    .then(res => res.json())
-    .then(data => setTest(data.name))
-    .catch(error => console.log(error));
-  }, []);
-
-
   return (
-      <Layout>{test}</Layout>
+      <Layout>
+          <Graph></Graph>
+      </Layout>
   );
 }
 
