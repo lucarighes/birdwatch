@@ -1,5 +1,11 @@
 #!/bin/bash
 
+#General tools
+sudo apt install python3.8-venv
+sudo apt install python3-pip
+sudo apt install -y apparmor apturl
+sudo apt install npm
+brl
 
 #Mongo installation
 wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
@@ -11,7 +17,8 @@ mongorestore -d birdwatchdb ./birdwatchdb
 
 #Flask
 cd api
+sudo apt install python3-flask
 python3 -m venv venv
 source venv/bin/activate
-pip install -r ./requirements.txt
 cd ..
+pip install -r ./requirements.txt
