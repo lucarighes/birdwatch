@@ -3,7 +3,6 @@
 #General tools
 sudo apt install -y apparmor apturl
 sudo apt install npm
-brl
 
 #Mongo installation
 wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
