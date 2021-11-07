@@ -1,12 +1,12 @@
 import React from 'react';
 import Navigation from './navigation';
-import Header from './header';
+import Header from './Header/index';
 import '../App.css';
 
 const Layout = ({ children }) => {
     return (
     <React.Fragment>
-        <div className="my_header"><Header /></div>
+        <Header />
         <div className="navigationWrapper">
             <Navigation />
             <main>{children}</main>
