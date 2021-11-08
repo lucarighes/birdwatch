@@ -3,8 +3,6 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './global';
 import { theme } from './theme';
 import Layout from './components/layout';
-import Graph from './components/graph';
-
 
 
 function App() {
@@ -14,7 +12,7 @@ function App() {
       <>
         <GlobalStyles />
           <Layout>
-              <Graph></Graph>
+            
           </Layout>
       </>
     </ThemeProvider>

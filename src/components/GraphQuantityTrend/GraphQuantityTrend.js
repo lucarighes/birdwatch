@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts';
-import '../App.css';
 
-
-const Graph = () => {
+const GraphQuantityTrend = () => {
     const [data, setData] = useState();
 
     useEffect(() => {
@@ -16,6 +14,7 @@ const Graph = () => {
 
     return (
       <React.Fragment>
+        <h1>This is a title</h1>
         <div className="graphArea">
         <ResponsiveContainer>
           <AreaChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
@@ -37,4 +36,4 @@ const Graph = () => {
     );
 }
 
-export default Graph
+export default GraphQuantityTrend

@@ -25,5 +25,9 @@ def home_page():
     return json.dumps(res) #json.dumps(res.values)
 
 
+@app.route("/graphtopics")
+def graph_topics():
+    return home_page()
+
 if __name__ == "__main__":
 	app.run()

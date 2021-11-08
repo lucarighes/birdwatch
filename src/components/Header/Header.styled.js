@@ -24,6 +24,7 @@ export const NavLeft = styled.div`
 export const NavCenter = styled.div`
   width: 40.0%;
   text-align: left;
+  font-size: 24px;
 `;
  
 export const Input = styled.input`
