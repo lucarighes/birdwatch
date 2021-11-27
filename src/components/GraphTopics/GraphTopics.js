@@ -1,37 +1,64 @@
 import React, { useState, useEffect } from 'react';
-import { AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts';
-
+import Form from 'react-bootstrap/Form';
+import TableStat from '../TableStat/TableStat';
+import TableExt from '../TableExt/TableExt';
 
 const GraphTopics = () => {
-    const [data, setData] = useState();
+    const [note, setNote] = useState("empty");
+    const [fact, setFact] = useState("empty");
+    const [data, setData] = useState([]);
 
-    useEffect(() => {
-      fetch('/graphtopics')
-      .then(res => res.json())
-      .then(data => setData(data))
-      .catch(error => console.log(error));
-    }, []);
+    const handleClickFact = (e) => {
+        setFact(e.target.value);
+        fetchData();
+    };
 
+    const handleClickNote = (e) => {
+        setNote(e.target.value);
+        fetchData();
+    };
+
+    const fetchData = () => {
+        console.log('/notefacts/' + note + '/' + fact);
+        fetch('/notefacts/' + note + '/' + fact)
+        .then(res => res.json())
+        .then(response => setData(response));
+    }
 
     return (
       <React.Fragment>
-        <div className="graphArea">
-        <ResponsiveContainer>
-          <AreaChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-              <defs>
-                <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
-                  <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
-                </linearGradient>
-              </defs>
-              <XAxis dataKey="name" />
-              <YAxis />
-              <CartesianGrid strokeDasharray="3 3" />
-              <Tooltip />
-              <Area type="monotone" dataKey="uv" stroke="#000000" fillOpacity={1} fill="#000000" />
-            </AreaChart>
-        </ResponsiveContainer>
+        <div className="splitScreen">
+          <div className="leftPane">
+              <div className="leftPane.left"><span></span></div>
+              <div className="leftPane.center">
+              <TableStat/>
+              <br></br><br></br><br></br>
+              <label>Select a filter</label>
+              <br></br><br></br>
+              <Form>
+                  <Form.Control as="select" onChange={handleClickFact.bind(this)}>
+                    <option value="empty">NULL</option>
+                    <option value="credible">Credible</option>
+                    <option value="not_credible">Not Credible</option>
+                    <option value="verifiable">Verifiable</option>
+                    <option value="not_verifiable">Not Verifiable</option>
+                    <option value="uncertain">Uncertain</option>
+                  </Form.Control>
+                  <br></br>
+                  <Form.Control as="select" onChange={handleClickNote.bind(this)}>
+                    <option value="empty">NULL</option>
+                    <option value="NOT_MISLEADING">Not Misleading</option>
+                    <option value="MISINFORMED_OR_POTENTIALLY_MISLEADING">Misinformed</option>
+                  </Form.Control>
+              </Form>
+              </div>
+              <div className="leftPane.right"><span></span></div>
+          </div>
+          <div className="rightPane">
+              <TableExt response={data} />
+          </div>
         </div>
+        
       </React.Fragment>
     );
 }
