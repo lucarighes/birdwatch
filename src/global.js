@@ -48,12 +48,14 @@ export const GlobalStyles = createGlobalStyle`
   .leftPane {
       display: flex;
       flexDirection: row;
-      align-items: center;
+      align-items: top;
       width: 50%;
   }
   
   .rightPane {
-      align-items: right;
+      display: flex;
+      flexDirection: row;
+      align-items: center;
       width: 50%;
   }
 

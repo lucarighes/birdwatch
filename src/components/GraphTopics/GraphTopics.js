@@ -8,22 +8,21 @@ const GraphTopics = () => {
     const [fact, setFact] = useState("empty");
     const [data, setData] = useState([]);
 
-    const handleClickFact = (e) => {
-        setFact(e.target.value);
-        fetchData();
+
+    function handleClickFact(e) {
+          setFact(e.target.value);
     };
 
     const handleClickNote = (e) => {
         setNote(e.target.value);
-        fetchData();
     };
 
-    const fetchData = () => {
-        console.log('/notefacts/' + note + '/' + fact);
+    useEffect(() => {
+      console.log('/notefacts/' + note + '/' + fact);
         fetch('/notefacts/' + note + '/' + fact)
         .then(res => res.json())
         .then(response => setData(response));
-    }
+    }, [fact, note]);
 
     return (
       <React.Fragment>
@@ -55,7 +54,11 @@ const GraphTopics = () => {
               <div className="leftPane.right"><span></span></div>
           </div>
           <div className="rightPane">
-              <TableExt response={data} />
+              <div className="leftPane.left"><span></span></div>
+              <div className="leftPane.center">
+                <TableExt response={data} />
+              </div>
+              <div className="leftPane.right"><span></span></div>
           </div>
         </div>
         
