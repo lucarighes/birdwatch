@@ -18,7 +18,6 @@ const GraphTopics = () => {
     };
 
     useEffect(() => {
-      console.log('/notefacts/' + note + '/' + fact);
         fetch('/notefacts/' + note + '/' + fact)
         .then(res => res.json())
         .then(response => setData(response));

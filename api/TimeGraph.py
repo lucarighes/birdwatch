@@ -9,6 +9,6 @@ def compute(data):
 
     sort = dict(sorted(res.items()))
     for k,v in sort.items():
-        res_list.append({'name': k, 'uv': v})
+        res_list.append({'name': k, 'count': v})
 
     return res_list

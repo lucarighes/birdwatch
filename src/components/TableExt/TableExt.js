@@ -1,4 +1,4 @@
-import React, { useState, useEffect }from 'react'
+import React from 'react'
 import Table from 'react-bootstrap/Table';
 
 const TableExt = (response) => {
@@ -11,7 +11,6 @@ const TableExt = (response) => {
         }
     }
 
-    console.log(res);
     return (
          <div className="table">
          	<Table striped bordered hover>

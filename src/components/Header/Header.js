@@ -3,7 +3,7 @@ import FocusLock from 'react-focus-lock';
 import { useOnClickOutside } from '../../hooks';
 import Burger from '../Burger/index';
 import Menu from '../Menu/index';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 
 
 
