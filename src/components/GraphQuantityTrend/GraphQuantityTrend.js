@@ -5,7 +5,7 @@ const GraphQuantityTrend = () => {
     const [data, setData] = useState();
 
     useEffect(() => {
-      fetch('/name')
+      fetch('/graphcount')
       .then(res => res.json())
       .then(data => setData(data))
       .catch(error => console.log(error));
@@ -18,8 +18,11 @@ const GraphQuantityTrend = () => {
           <div className="one"><span></span></div>
           
           <div className="two">
-            <h1>This is a title</h1>
-            <ResponsiveContainer width={"100%"} height={"90%"}>
+            <h1>Tweets trend</h1>
+            <p>This graph reports the number of tweets overtime</p>
+            <br></br>
+            <br></br>
+            <ResponsiveContainer width={"100%"} height={"80%"}>
               <AreaChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                   <defs>
                     <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">

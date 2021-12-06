@@ -56,7 +56,7 @@ export const GlobalStyles = createGlobalStyle`
   .rightPane {
       display: flex;
       flexDirection: row;
-      align-items: center;
+      align-items: top;
       width: 50%;
   }
 
@@ -103,5 +103,12 @@ export const GlobalStyles = createGlobalStyle`
   .three{
     grid-column: 5;
     grid-row: 1;
+  }
+
+  @media (max-width: 1500px){
+    .splitScreen{
+      display: block;
+      flexDirection: column;
+    }
   }
 `

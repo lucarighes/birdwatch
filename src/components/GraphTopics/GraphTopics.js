@@ -9,11 +9,11 @@ const GraphTopics = () => {
     const [data, setData] = useState([]);
 
 
-    function handleClickFact(e) {
-          setFact(e.target.value);
+    function handleClickFact(e){
+        setFact(e.target.value);
     };
 
-    const handleClickNote = (e) => {
+    function handleClickNote(e){
         setNote(e.target.value);
     };
 
@@ -23,13 +23,14 @@ const GraphTopics = () => {
         .then(response => setData(response));
     }, [fact, note]);
 
+
     return (
       <React.Fragment>
         <div className="splitScreen">
           <div className="leftPane">
               <div className="leftPane.left"><span></span></div>
               <div className="leftPane.center">
-              <TableStat/>
+              <TableStat />
               <br></br><br></br><br></br>
               <label>Select a filter</label>
               <br></br><br></br>

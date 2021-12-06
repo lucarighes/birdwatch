@@ -9,7 +9,7 @@ app.config["MONGO_URI"] = "mongodb://localhost:27017/birdwatch"
 mongo = PyMongo(app)
 
 
-@app.route("/name")
+@app.route("/graphcount")
 def home_page():
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     mydb = myclient["birdwatchdb"]
@@ -20,8 +20,7 @@ def home_page():
         data.append(x.get('createdAtMillis'))
     
     res = TimeGraph.compute(data)
-    print(res)
-    return json.dumps(res) #json.dumps(res.values)
+    return json.dumps(res) 
 
 
 @app.route("/graphtopics")

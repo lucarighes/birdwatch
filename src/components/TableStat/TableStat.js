@@ -1,3 +1,6 @@
+
+
+
 import React, { useState, useEffect }from 'react'
 import Table from 'react-bootstrap/Table';
 
@@ -12,7 +15,9 @@ const TableStat = () => {
           setMis(response['MISINFORMED_OR_POTENTIALLY_MISLEADING'])
           setNotmis(response['NOT_MISLEADING'])
         })
-    });
+    }, []);
+
+
     return (
          <div className="table">
          	<Table striped bordered hover>
