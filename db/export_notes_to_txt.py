@@ -15,7 +15,7 @@ def fetch():
 
 
 def printToFile(data):
-    with open('notes.txt', 'w') as f:
+    with open('/data/notes.txt', 'w') as f:
         for string in data:
             f.write(str(string))
             f.write('\n')
