@@ -13,6 +13,14 @@ export const NavHeader = styled.div`
   display: flex;
   align-items: left;
   margin: 0 auto;
+  a {
+    background-color: #1DA1F2;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
   color: ${({ theme }) => theme.primaryHover};
 `;
  
@@ -49,8 +57,19 @@ export const Input = styled.input`
  
 export const NavRight = styled.div`
   width: 50.0%;
-  text-align: right;
- 
+  text-align: center;
+  a {
+    background-color: #1DA1F2;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  a:hover{
+    border: 1px solid white;
+  }
   svg {
     margin-right: 20px;
   }

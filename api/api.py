@@ -1,8 +1,11 @@
+from __future__ import print_function
 from flask import Flask, jsonify, json
 from flask_pymongo import PyMongo
 from bson import json_util
 import pymongo, sys
 import TimeGraph
+
+
 
 app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb://localhost:27017/birdwatch"
@@ -96,6 +99,20 @@ def notefactstat():
             data1["MISINFORMED_OR_POTENTIALLY_MISLEADING"][x.get("Label")] += 1
 
     return json.loads(json_util.dumps(data1))
+
+
+@app.route("/search/<term>")
+def search(term):
+    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+    mydb = myclient["birdwatchdb"]
+    mycol = mydb["notes"]
+
+    data = {}
+    for x in mycol.find({'$text': {'$search': term}}, {'tweetId':1, 'summary':1}):
+        data[x.get('tweetId')] = x.get('summary')
+    
+    return json.loads(json_util.dumps(data))
+
 
 
 if __name__ == "__main__":
