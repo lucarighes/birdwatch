@@ -1,0 +1,122 @@
+{"_id":{"$oid":"61a113558ec61fc998a74b59"},"TweetID":1433639909504524289,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b5a"},"TweetID":1432932470517809152,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b5b"},"TweetID":1356323692389740547,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b5c"},"TweetID":1388093631274176512,"MatchedFact":"fact 1","Fact":"(['former FBI Director James Comey and former CIA Director John Brennan have been charged with multiple counts of treason'], 'not_credible', 0.72996736)","Label":"not_credible"}
+{"_id":{"$oid":"61a113558ec61fc998a74b5d"},"TweetID":1434263752443056130,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b5e"},"TweetID":1430692673640353795,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b5f"},"TweetID":1398970296397451265,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b60"},"TweetID":1435918147245256707,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b61"},"TweetID":1393773200425750532,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b62"},"TweetID":1428397094214246403,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b63"},"TweetID":1365709437332303874,"MatchedFact":"Fact 1","Fact":"(['The stage at CPAC 2021 was intentionally designed to look like an early European rune, which has also been used as a Nazi symbol.'], 'uncertain', 0.7342867)","Label":"uncertain"}
+{"_id":{"$oid":"61a113558ec61fc998a74b64"},"TweetID":1362522038435418113,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b65"},"TweetID":1375447535112744961,"MatchedFact":"Fact 2","Fact":"([\"Georgia's new voting law allows volunteers to hand out drinks to voters waiting in line, so long as the drink isn't water.\"], 'not_credible', 0.70934373)","Label":"not_credible"}
+{"_id":{"$oid":"61a113558ec61fc998a74b66"},"TweetID":1392830532732391433,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b67"},"TweetID":1383967482029871106,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b68"},"TweetID":1436143658693185537,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b69"},"TweetID":1362774562769879044,"MatchedFact":"Fact 1","Fact":"(['Coca-Cola&#039;s diversity, equity, and inclusion training contained slides which read &quot;Try to be less white.&quot;'], 'uncertain', 0.7161475)","Label":"uncertain"}
+{"_id":{"$oid":"61a113558ec61fc998a74b6a"},"TweetID":1361567277771030528,"MatchedFact":"Fact 1","Fact":"(['Green energy technologies like wind and solar are the cause of rolling blackouts in Texas and other states hit by the February cold-snap.'], 'not_credible', 0.703174)","Label":"not_credible"}
+{"_id":{"$oid":"61a113558ec61fc998a74b6b"},"TweetID":1361792731115380740,"MatchedFact":"Fact 1","Fact":"(['Green energy technologies like wind and solar are the cause of rolling blackouts in Texas and other states hit by the February cold-snap.'], 'not_credible', 0.7098157)","Label":"not_credible"}
+{"_id":{"$oid":"61a113558ec61fc998a74b6c"},"TweetID":1381618078233006081,"MatchedFact":"Fact 3","Fact":"(['Daunte Wright pulled over by police because he had air freshener hanging from mirror'], 'not_credible', 0.69846785)","Label":"not_credible"}
+{"_id":{"$oid":"61a113558ec61fc998a74b6d"},"TweetID":1389398204026925061,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b6e"},"TweetID":1392683653109403649,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b6f"},"TweetID":1430568197867069444,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b70"},"TweetID":1363892691025752067,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b71"},"TweetID":1425038556628672512,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b72"},"TweetID":1361060482631798785,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b73"},"TweetID":1404740285096153094,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b74"},"TweetID":1434645006061539332,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b75"},"TweetID":1419399511626104836,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b76"},"TweetID":1371124208374272000,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b77"},"TweetID":1430267048932827152,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b78"},"TweetID":991762938842288133,"MatchedFact":"Fact 1","Fact":"(['Planned Parenthood founder Margaret Sanger said \"Slav, Latin and Hebrew immigrants are human weeds . . . a deadweight of human waste. Blacks, soldiers and Jews are a menace to race.\"'], 'not_credible', 0.7253617)","Label":"not_credible"}
+{"_id":{"$oid":"61a113558ec61fc998a74b79"},"TweetID":1385589380899872775,"MatchedFact":"Fact 1","Fact":"(['New Bills Allow Drivers to Run Over Protesters if Theyâ\\x80\\x99re Standing in the Street'], 'not_credible', 0.7352371)","Label":"not_credible"}
+{"_id":{"$oid":"61a113558ec61fc998a74b7a"},"TweetID":1354794056950407170,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b7b"},"TweetID":1363866196542685186,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b7c"},"TweetID":1430380531003297793,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b7d"},"TweetID":1350466308043890691,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b7e"},"TweetID":1359212288469794819,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b7f"},"TweetID":1412817110909194249,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b80"},"TweetID":1392223627123253262,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b81"},"TweetID":1397327635013844998,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b82"},"TweetID":1389442451836964864,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b83"},"TweetID":1404677731770585088,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b84"},"TweetID":1432895569266188288,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b85"},"TweetID":1433201467146465285,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b86"},"TweetID":1410337192392671234,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b87"},"TweetID":1420100620602822656,"MatchedFact":"Fact 2","Fact":"(['Five people died during the Jan. 6, 2021, U.S. Capitol riot.'], 'credible', 0.6563731)","Label":"credible"}
+{"_id":{"$oid":"61a113558ec61fc998a74b88"},"TweetID":1407804815267319814,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b89"},"TweetID":1359929545281970181,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b8a"},"TweetID":1369747504565256193,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b8b"},"TweetID":1434009106617077760,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b8c"},"TweetID":1239470743307431936,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b8d"},"TweetID":1432711020028567555,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b8e"},"TweetID":1425101635219513352,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b8f"},"TweetID":1361118478778986498,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b90"},"TweetID":1433291417258971140,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b91"},"TweetID":1372197013060775937,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b92"},"TweetID":1381748662984974338,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b93"},"TweetID":1384718532852830210,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b94"},"TweetID":1381714433622298627,"MatchedFact":"Fact 1","Fact":"(['Daunte Wright pulled over by police because he had air freshener hanging from mirror'], 'not_credible', 0.75250584)","Label":"not_credible"}
+{"_id":{"$oid":"61a113558ec61fc998a74b95"},"TweetID":1411806581113643011,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b96"},"TweetID":1430518056707575809,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b97"},"TweetID":1416088245730004997,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b98"},"TweetID":1365404843754459137,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b99"},"TweetID":1357473710324797440,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b9a"},"TweetID":1382791239716675584,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b9b"},"TweetID":1389023946666745858,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b9c"},"TweetID":1429917862429396994,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b9d"},"TweetID":1371952543962648579,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b9e"},"TweetID":1374764213982355462,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74b9f"},"TweetID":1388795023915847682,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74ba0"},"TweetID":1357725561318232066,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74ba1"},"TweetID":1393114025312071680,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74ba2"},"TweetID":1431830307825717253,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74ba3"},"TweetID":1361028464736952327,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74ba4"},"TweetID":1384718532852830210,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74ba5"},"TweetID":1373813319543492609,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74ba6"},"TweetID":1438559634646765574,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74ba7"},"TweetID":1435849050910334978,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74ba8"},"TweetID":1362934176836702209,"MatchedFact":"Fact 1","Fact":"(['Video from Mars&#039; surface with sound'], 'not_credible', 0.7081838)","Label":"not_credible"}
+{"_id":{"$oid":"61a113558ec61fc998a74ba9"},"TweetID":1399082430091440129,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74baa"},"TweetID":1378850175951761409,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bab"},"TweetID":1366724920726728706,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bac"},"TweetID":1357028286728187906,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bad"},"TweetID":1361118478778986498,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bae"},"TweetID":1397748840770514944,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74baf"},"TweetID":1429939376356827136,"MatchedFact":"Fact 1","Fact":"(['Pfizer CEO Albert Bourla refused to take the Pfizer-BioNTech COVID-19 vaccine.'], 'not_credible', 0.7111762)","Label":"not_credible"}
+{"_id":{"$oid":"61a113558ec61fc998a74bb0"},"TweetID":1372197013060775937,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bb1"},"TweetID":1381758914514071554,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bb2"},"TweetID":1401745998347649026,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bb3"},"TweetID":1371505301376143360,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bb4"},"TweetID":1356377394844758017,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bb5"},"TweetID":1381748662984974338,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bb6"},"TweetID":1389656079844347910,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bb7"},"TweetID":1429950912307531778,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bb8"},"TweetID":1365730502754267140,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bb9"},"TweetID":1433874938956435458,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bba"},"TweetID":1356403736646709248,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bbb"},"TweetID":1406042310866046976,"MatchedFact":"Fact 1","Fact":"(['Are Obama’s early records “sealed”?'], 'not_verifiable', 0.7157573)","Label":"not_verifiable"}
+{"_id":{"$oid":"61a113558ec61fc998a74bbc"},"TweetID":1433291417258971140,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bbd"},"TweetID":1374820840295051266,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bbe"},"TweetID":1381784220004085770,"MatchedFact":"Fact 1","Fact":"(['Daunte Wright pulled over by police because he had air freshener hanging from mirror'], 'not_credible', 0.7511832)","Label":"not_credible"}
+{"_id":{"$oid":"61a113558ec61fc998a74bbf"},"TweetID":1382948208691716099,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bc0"},"TweetID":1391834881877942274,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bc1"},"TweetID":1394369699907993603,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bc2"},"TweetID":1430874888621993993,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bc3"},"TweetID":1363863185678245890,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bc4"},"TweetID":1403908018480291843,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bc5"},"TweetID":1437011899380641793,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bc6"},"TweetID":1385589380899872775,"MatchedFact":"Fact 1","Fact":"(['New Bills Allow Drivers to Run Over Protesters if Theyâ\\x80\\x99re Standing in the Street'], 'not_credible', 0.7352371)","Label":"not_credible"}
+{"_id":{"$oid":"61a113558ec61fc998a74bc7"},"TweetID":1397327635013844998,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bc8"},"TweetID":1239470743307431936,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bc9"},"TweetID":1430380531003297793,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bca"},"TweetID":1407804815267319814,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bcb"},"TweetID":1409543116298887168,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bcc"},"TweetID":1432323119499280391,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bcd"},"TweetID":1362943828240531456,"MatchedFact":"Fact 1","Fact":"(['First ever photo of a sunset on Mars.'], 'not_credible', 0.7458113)","Label":"not_credible"}
+{"_id":{"$oid":"61a113558ec61fc998a74bce"},"TweetID":1388795023915847682,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bcf"},"TweetID":1428402347584196611,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bd0"},"TweetID":1404416788155219973,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bd1"},"TweetID":1361453705506258945,"MatchedFact":"","Fact":"","Label":""}
+{"_id":{"$oid":"61a113558ec61fc998a74bd2"},"TweetID":1392603286839115776,"MatchedFact":"","Fact":"","Label":""}
