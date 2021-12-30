@@ -151,7 +151,7 @@ export const GlobalStyles = createGlobalStyle`
     border: 1px solid ${({ theme }) => theme.primaryLight};
     border-top: 0;
 
-    p {
+    p, li, ul {
       margin-bottom: 10px;
       font-size: 14px;
       line-height: 20px;

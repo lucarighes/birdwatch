@@ -3,7 +3,7 @@ from flask import Flask, jsonify, json
 from flask_pymongo import PyMongo
 from bson import json_util
 import pymongo, sys
-import TimeGraph
+from script.TimeGraph import compute
 
 
 
@@ -22,7 +22,7 @@ def home_page():
     for x in mycol.find({}, {'createdAtMillis':1}):
         data.append(x.get('createdAtMillis'))
     
-    res = TimeGraph.compute(data)
+    res = compute(data)
     return json.dumps(res) 
 
 
@@ -113,6 +113,37 @@ def search(term):
     
     return json.loads(json_util.dumps(data))
 
+
+@app.route("/searchfact/<id>")
+def searchfact(id):
+    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+    mydb = myclient["birdwatchdb"]
+    mycol = mydb["facts"]
+
+    data = {}
+    for x in mycol.find({'TweetID': int(id)}, {'Label':1, 'Fact':1}):
+        if x.get('Label') in data.keys():
+            data[x.get('Label')] += 1
+        else:
+            data[x.get('Label')] = 1
+
+    return json.loads(json_util.dumps(data))
+
+
+@app.route("/searchnote/<id>")
+def searchnote(id):
+    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+    mydb = myclient["birdwatchdb"]
+    mycol = mydb["notes"]
+
+    data = {}
+    for x in mycol.find({'tweetId': int(id)}, {'classification':1}):
+        if x.get('classification') in data.keys():
+            data[x.get('classification')] += 1
+        else:
+            data[x.get('classification')] = 1
+
+    return json.loads(json_util.dumps(data))
 
 
 if __name__ == "__main__":
