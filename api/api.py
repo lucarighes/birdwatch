@@ -93,7 +93,7 @@ def notefactstat():
             r.append(x)        
 
     for x in r:
-        if(x.get("classification") == "NOT_MISLEADING"):
+        if(x.get("match")[0].get("classification") == "NOT_MISLEADING"):
             data1["NOT_MISLEADING"][x.get("Label")] += 1
         else:
             data1["MISINFORMED_OR_POTENTIALLY_MISLEADING"][x.get("Label")] += 1

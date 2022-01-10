@@ -17,6 +17,7 @@ const TableStat = () => {
         })
     }, []);
 
+    console.log(notmis);
 
     return (
          <div className="table">

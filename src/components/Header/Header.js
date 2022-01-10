@@ -12,13 +12,7 @@ import React, { useState, useRef } from 'react';
                     </FocusLock>
                   </div> */
 
-const Header = () => {
-    const [open, setOpen] = useState(false);
-    const node = useRef();
-    const menuId = "main-menu";
-
-    useOnClickOutside(node, () => setOpen(false));
-    
+const Header = () => {    
     return (
         <Nav>
           <NavHeader>
