@@ -23,7 +23,7 @@ const SearchBar = () => {
     return (
       <React.Fragment>
           <Form className='d-flex'>
-            <Form.Control type="text" placeholder="Enter words" width="50%" className="mr-sm-2" onChange={handleChange.bind(this)}/>
+            <Form.Control type="text" placeholder="Try to write 'Daunte Wright'" width="50%" className="mr-sm-2" onChange={handleChange.bind(this)}/>
              
             <Button variant="primary" type="submit" className="form-button" onClick={handleOnSubmit.bind(this)}>
               Submit

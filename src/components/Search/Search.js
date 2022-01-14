@@ -18,13 +18,13 @@ const Search = () => {
     
     useEffect(() => {
         setWord(words);
-        fetch('/search/' + words)
+        fetch('/newsearch/' + words)
         .then(res => res.json())
         .then(response => setData(response));
     }, []);
 
     useEffect(() => {
-        fetch('/search/' + word)
+        fetch('/newsearch/' + word)
         .then(res => res.json())
         .then(response => setData(response));
     }, [word]);
@@ -39,6 +39,7 @@ const Search = () => {
       setWord(bar);
       console.log("update");
     };
+
 
     return (
       <React.Fragment>

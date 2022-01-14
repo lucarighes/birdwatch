@@ -101,6 +101,20 @@ def notefactstat():
     return json.loads(json_util.dumps(data1))
 
 
+@app.route("/newsearch/<term>")
+def newsearch(term):
+    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+    mydb = myclient["birdwatchdb"]
+    mycol = mydb["tweets"]
+
+    data = []
+    for x in mycol.find({'$text': {'$search': term}}, {'id_str':1, 'full_text':1, 'created_at':1, 'favorite_count':1, 'retweet_count':1}).sort([('retweet_count', pymongo.DESCENDING), ('favorite_count', pymongo.DESCENDING)]):
+        date = x.get('created_at').split();
+        data.append([x.get('id_str'), x.get('full_text'), str(date[2])+ ' ' + str(date[1])+ ' ' +str(date[5]), x.get('favorite_count'), x.get('retweet_count')])
+
+    return json.dumps(tuple(data))
+
+
 @app.route("/search/<term>")
 def search(term):
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
@@ -137,11 +151,15 @@ def searchnote(id):
     mycol = mydb["notes"]
 
     data = {}
-    for x in mycol.find({'tweetId': int(id)}, {'classification':1}):
+    raw = []
+    for x in mycol.find({'tweetId': int(id)}, {'classification':1, 'summary':1}):
+        raw.append([x.get('classification'), x.get('summary')]);
         if x.get('classification') in data.keys():
             data[x.get('classification')] += 1
         else:
             data[x.get('classification')] = 1
+
+    data['data'] = raw;
 
     return json.loads(json_util.dumps(data))
 

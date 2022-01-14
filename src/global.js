@@ -211,5 +211,38 @@ export const GlobalStyles = createGlobalStyle`
     background-color: #CBB700;
     color: black;
   }
+
+.container{
+  display: flex;
+  flexDirection: row;
+}
+
+.left-coll {
+  margin: 1%;
+  display: flex;
+  flexDirection: row;
+  width: 40%;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.right-coll {
+  margin-right: 10px;
+  margin-top: 1%;
+  display:inline-block;
+  position:relative;
+  flexDirection: row;
+  width: 40%;
+  text-align: right;
+}
+
+.notes-coll {
+  margin: 1%;
+  display:flex;
+  flexDirection: row;
+  width: 19%;
+  text-align: justify;
+  text-justify: inter-word;
+}
 `
 
