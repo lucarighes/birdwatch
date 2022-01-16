@@ -112,7 +112,12 @@ def newsearch(term):
         date = x.get('created_at').split();
         data.append([x.get('id_str'), x.get('full_text'), str(date[2])+ ' ' + str(date[1])+ ' ' +str(date[5]), x.get('favorite_count'), x.get('retweet_count')])
 
-    return json.dumps(tuple(data))
+    data = data[0:100]
+    for elem in data:
+        elem.append(searchnote(elem[0]))
+        elem.append(searchfact(elem[0]))
+
+    return json.dumps(tuple(data[0:100]))
 
 
 @app.route("/search/<term>")
@@ -134,12 +139,16 @@ def searchfact(id):
     mydb = myclient["birdwatchdb"]
     mycol = mydb["facts"]
 
-    data = {}
+    data = {"credible":0, "not_credible":0, "verifiable":0, "not_verifiable":0, "uncertain":0}
+    raw = []
     for x in mycol.find({'TweetID': int(id)}, {'Label':1, 'Fact':1}):
+        raw.append([x.get('Label'), x.get('Fact')]);
         if x.get('Label') in data.keys():
             data[x.get('Label')] += 1
         else:
             data[x.get('Label')] = 1
+
+    data['data'] = raw;
 
     return json.loads(json_util.dumps(data))
 
@@ -150,7 +159,7 @@ def searchnote(id):
     mydb = myclient["birdwatchdb"]
     mycol = mydb["notes"]
 
-    data = {}
+    data = {"MISINFORMED_OR_POTENTIALLY_MISLEADING": 0, "NOT_MISLEADING": 0};
     raw = []
     for x in mycol.find({'tweetId': int(id)}, {'classification':1, 'summary':1}):
         raw.append([x.get('classification'), x.get('summary')]);

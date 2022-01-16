@@ -221,7 +221,7 @@ export const GlobalStyles = createGlobalStyle`
   margin: 1%;
   display: flex;
   flexDirection: row;
-  width: 40%;
+  width: 80%;
   text-align: justify;
   text-justify: inter-word;
 }
@@ -232,7 +232,7 @@ export const GlobalStyles = createGlobalStyle`
   display:inline-block;
   position:relative;
   flexDirection: row;
-  width: 40%;
+  width: 19%;
   text-align: right;
 }
 
@@ -240,9 +240,13 @@ export const GlobalStyles = createGlobalStyle`
   margin: 1%;
   display:flex;
   flexDirection: row;
-  width: 19%;
+  width: 9%;
   text-align: justify;
   text-justify: inter-word;
+}
+
+.display_button {
+  margin: 1%;
 }
 `
 
