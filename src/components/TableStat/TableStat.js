@@ -9,7 +9,7 @@ const TableStat = () => {
     const [notmis, setNotmis] = useState([]);
 
     useEffect(() => {
-        fetch('/notefactstat')
+        fetch('/api/notefactstat')
         .then(res => res.json())
         .then(response => {
           setMis(response['MISINFORMED_OR_POTENTIALLY_MISLEADING'])

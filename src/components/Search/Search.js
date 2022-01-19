@@ -18,13 +18,13 @@ const Search = () => {
     
     useEffect(() => {
         setWord(words);
-        fetch('/newsearch/' + words)
+        fetch('/api/newsearch/' + words)
         .then(res => res.json())
         .then(response => setData(response));
     }, []);
 
     useEffect(() => {
-        fetch('/newsearch/' + word)
+        fetch('/api/newsearch/' + word)
         .then(res => res.json())
         .then(response => setData(response));
     }, [word]);

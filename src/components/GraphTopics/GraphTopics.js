@@ -18,7 +18,7 @@ const GraphTopics = () => {
     };
 
     useEffect(() => {
-        fetch('/notefacts/' + note + '/' + fact)
+        fetch('/api/notefacts/' + note + '/' + fact)
         .then(res => res.json())
         .then(response => setData(response));
     }, [fact, note]);

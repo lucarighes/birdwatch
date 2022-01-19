@@ -5,7 +5,7 @@ const GraphQuantityTrend = () => {
     const [data, setData] = useState();
 
     useEffect(() => {
-      fetch('/graphcount')
+      fetch('/api/graphcount')
       .then(res => res.json())
       .then(data => setData(data))
       .catch(error => console.log(error));

@@ -19,7 +19,7 @@ const Layout = () => {
         <link href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" rel="stylesheet" />
         <div className="navigationWrapper">
             <main>
-            <Router>      
+            <Router basename="/">      
                 <Routes>
                   <Route path="/" element={<Main />} />
                   <Route path="/graphquantitytrend" element={<GraphQuantityTrend />} />

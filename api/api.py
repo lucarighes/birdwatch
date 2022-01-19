@@ -1,5 +1,5 @@
 from __future__ import print_function
-from flask import Flask, jsonify, json
+from flask import Flask, jsonify, json, send_from_directory
 from flask_pymongo import PyMongo
 from bson import json_util
 import pymongo, sys
@@ -7,12 +7,15 @@ from script.TimeGraph import compute
 
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="../build", static_url_path="/")
 app.config["MONGO_URI"] = "mongodb://localhost:27017/birdwatch"
 mongo = PyMongo(app)
 
+@app.route("/")
+def index():
+    return app.send_static_file("index.html")
 
-@app.route("/graphcount")
+@app.route("/api/graphcount")
 def home_page():
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     mydb = myclient["birdwatchdb"]
@@ -26,12 +29,12 @@ def home_page():
     return json.dumps(res) 
 
 
-@app.route("/graphtopics")
+@app.route("/api/graphtopics")
 def graph_topics():
     return home_page()
 
 
-@app.route("/notefacts/<notes>/<facts>")
+@app.route("/api/notefacts/<notes>/<facts>")
 def notefacts(notes, facts):
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     mydb = myclient["birdwatchdb"]
@@ -66,7 +69,7 @@ def notefacts(notes, facts):
 
 
 
-@app.route("/notefactstat")
+@app.route("/api/notefactstat")
 def notefactstat():
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     mydb = myclient["birdwatchdb"]
@@ -101,7 +104,7 @@ def notefactstat():
     return json.loads(json_util.dumps(data1))
 
 
-@app.route("/newsearch/<term>")
+@app.route("/api/newsearch/<term>")
 def newsearch(term):
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     mydb = myclient["birdwatchdb"]
@@ -120,7 +123,7 @@ def newsearch(term):
     return json.dumps(tuple(data[0:100]))
 
 
-@app.route("/search/<term>")
+@app.route("/api/search/<term>")
 def search(term):
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     mydb = myclient["birdwatchdb"]
@@ -133,7 +136,7 @@ def search(term):
     return json.loads(json_util.dumps(data))
 
 
-@app.route("/searchfact/<id>")
+@app.route("/api/searchfact/<id>")
 def searchfact(id):
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     mydb = myclient["birdwatchdb"]
@@ -153,7 +156,7 @@ def searchfact(id):
     return json.loads(json_util.dumps(data))
 
 
-@app.route("/searchnote/<id>")
+@app.route("/api/searchnote/<id>")
 def searchnote(id):
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     mydb = myclient["birdwatchdb"]
