@@ -1,6 +1,6 @@
 server {
   	listen 80;
-	root /home/luca/birdwatch/build;
+	root /home/USER/birdwatch/build;
 	index index.html;
   	return 301 https://$host$request_uri;
 }
@@ -12,7 +12,7 @@ server{
 	ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
 	ssl_ciphers HIGH:!aNULL:!MD5;
 	proxy_cookie_path / "/; HTTPOnly; Secure";
-	root /home/luca/birdwatch/build;
+	root /home/USER/birdwatch/build;
 	index index.html;
 	
 	location / {

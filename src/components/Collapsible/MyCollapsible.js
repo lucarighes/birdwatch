@@ -57,7 +57,6 @@ const MyCollapsible = (response) => {
         res.push(value1);
       }
   }
-  console.log(res);
   
 
   var buttons = []
@@ -102,7 +101,6 @@ const MyCollapsible = (response) => {
 
 
   const getFact = (id, note, fact) => {
-      console.log(id);
       setFact(fact);
       setNote(note);
       setId(id);

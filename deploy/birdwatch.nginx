@@ -1,6 +1,6 @@
 server{
 	listen 80;
-	root /home/luca/birdwatch/build;
+	root /home/USER/birdwatch/build;
 	index index.html;
 	
 	location / {

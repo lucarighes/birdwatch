@@ -37,7 +37,6 @@ const Search = () => {
     function handleOnSubmit(e){
       e.preventDefault();
       setWord(bar);
-      console.log("update");
     };
 
 
