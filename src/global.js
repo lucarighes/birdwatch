@@ -29,7 +29,7 @@ export const GlobalStyles = createGlobalStyle`
     text-rendering: optimizeLegibility;
   }
 
-  
+
   .navigationWrapper{
       height: 90%;
       align-items: center;
@@ -135,7 +135,7 @@ export const GlobalStyles = createGlobalStyle`
 
   .graph {
     width: 80%;
-    height: 60%;
+    height: 55%;
     margin-top: 8%;
     margin-left: 10%;
     min-width: 300px;
