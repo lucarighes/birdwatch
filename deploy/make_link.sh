@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo ln -s birdwatch.conf ../sites-enabled/
+sudo ln -s /etc/nginx/sites-available/birdwatch.conf /etc/nginx/sites-enabled/

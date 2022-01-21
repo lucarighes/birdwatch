@@ -12,7 +12,6 @@ const Search = () => {
     const [word, setWord] = useState([]);
 
     const {state} = useLocation();
-    const navigate = useNavigate();
     const { words } = state;
 
     

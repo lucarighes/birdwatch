@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -109,7 +108,7 @@ export const GlobalStyles = createGlobalStyle`
     grid-row: 1;
   }
 
-  @media (max-width: 1500px){
+  @media (max-width: 1300px){
     .splitScreen{
       display: block;
       flexDirection: column;

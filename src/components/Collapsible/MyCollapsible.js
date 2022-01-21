@@ -2,15 +2,12 @@ import React from 'react';
 import Collapsible from 'react-collapsible';
 import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
-import MD5 from "crypto-js/md5";
-
 
 
 const MyCollapsible = (response) => {
   const [id, setId] = useState([]);
   const [fact, setFact] = useState([]);
   const [note, setNote] = useState([]);
-  const [hash, setHash] = useState([]);
   const [respointer, setRespointer] = useState(10);
   const factor = 10;
 
