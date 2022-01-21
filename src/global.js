@@ -29,6 +29,7 @@ export const GlobalStyles = createGlobalStyle`
     text-rendering: optimizeLegibility;
   }
 
+  
   .navigationWrapper{
       height: 90%;
       align-items: center;

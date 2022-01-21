@@ -7,7 +7,7 @@ const Header = () => {
             <NavLeft>
                   
             </NavLeft>
-            <NavCenter><a href="../">Birdwatch</a></NavCenter>
+            <NavCenter><a href="../">BirdWatch Observatory</a></NavCenter>
             <NavRight> 
                 <a href="../graphtopics">Filter data</a>
                 <a href="../about">About</a>

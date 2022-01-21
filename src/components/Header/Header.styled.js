@@ -8,7 +8,7 @@ export const Nav = styled.div`
 `;
  
 export const NavHeader = styled.div`
-  padding: 26px 20px;
+  padding: 16px 1px;
   width: 100%;
   display: flex;
   align-items: left;
@@ -58,6 +58,7 @@ export const Input = styled.input`
 export const NavRight = styled.div`
   width: 50.0%;
   text-align: center;
+  padding: 8px;
   a {
     background-color: #1DA1F2;
     color: white;

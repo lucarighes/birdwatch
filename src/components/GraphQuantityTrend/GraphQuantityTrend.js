@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer, AxisLabel } from 'recharts';
 
 const GraphQuantityTrend = () => {
     const [data, setData] = useState();
@@ -15,8 +15,8 @@ const GraphQuantityTrend = () => {
     return (
       <React.Fragment>
         <div className="graph">
-        <ResponsiveContainer width={"100%"} height={"100%"}>
-        <AreaChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+        <ResponsiveContainer width={"100%"} height={"80%"}>
+        <AreaChart data={data} margin={{ top: 10, right: 30, left: 30, bottom: 5 }}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#1DA1F2" stopOpacity={0.8}/>
@@ -24,7 +24,7 @@ const GraphQuantityTrend = () => {
               </linearGradient>
             </defs>
             <XAxis dataKey="name" />
-            <YAxis />
+            <YAxis label={{ value: '# birdwatch notes', angle: -90, position: 'left' }}/>
             <CartesianGrid strokeDasharray="3 3" />
             <Tooltip />
             <Area type="monotone" dataKey="count" stroke="#1DA1F2" fillOpacity={1} fill="url(#colorUv)" />
