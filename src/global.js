@@ -134,10 +134,10 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .graph {
-    width: 80%;
-    height: 55%;
+    width: 70%;
+    height: 45%;
     margin-top: 8%;
-    margin-left: 10%;
+    margin-left: 13%;
     min-width: 300px;
     min-height: 200px;
   }
