@@ -10,6 +10,8 @@ const Search = () => {
     const [data, setData] = useState([]);
     const [bar, setBar] = useState([]);
     const [word, setWord] = useState([]);
+    const [factcheck, setFactcheck] = useState(0);
+
 
     const {state} = useLocation();
     const { words } = state;
@@ -26,18 +28,21 @@ const Search = () => {
         fetch('/api/newsearch/' + word)
         .then(res => res.json())
         .then(response => setData(response));
-    }, [word]);
+    }, [word, factcheck]);
 
     
     function handleChange(e){
       setBar(e.target.value);
     }
 
+    function handleCheck(e){
+      factcheck == 1 ? setFactcheck(0) :  setFactcheck(1);
+    }
+
     function handleOnSubmit(e){
       e.preventDefault();
       setWord(bar);
     };
-
 
     return (
       <React.Fragment>
@@ -46,15 +51,20 @@ const Search = () => {
           <div className="two">
             <Form className='d-flex' onSubmit={handleOnSubmit}>
               <Form.Control type="text" placeholder="Enter words" width="50%" className="mr-sm-2" onChange={handleChange.bind(this)}/>
-               
+              
               <Button variant="primary" type="submit" className="form-button" onClick={handleOnSubmit}>
                 Submit
               </Button>
+              <Form.Group controlId="formBasicCheckbox">
+                 <Form.Check type="checkbox" className="form-check" label="Only facts" onClick={handleCheck}/>
+              </Form.Group>
+
             </Form>
 
 
             <p>These are the results for - {word}</p>
-            <Collapsible response={data} />
+            <br></br>
+            <Collapsible response={data} factcheck={data, factcheck}/>
           </div>
           <div className="three"><span></span></div>
         </div>

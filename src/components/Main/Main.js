@@ -1,11 +1,12 @@
 import React from 'react';
 import GraphQuantityTrend from '../GraphQuantityTrend/GraphQuantityTrend';
 import SearchBar from '../SearchBar/index.js';
-
+import Suggestions from '../Suggestions/index.js';
+import { useNavigate } from 'react-router-dom';
 
 
 const Main = () => {
-
+  
   return (
     <React.Fragment>
       <div className="wrapper">
@@ -18,7 +19,7 @@ initiative at <a href="https://twitter.com/">Twitter</a> based on the official <
 is augmented with claim reviews wrote by expert fact-checkers for the
 same fact, when available.</h5>
           <SearchBar />
-          
+          <Suggestions />
           <GraphQuantityTrend />
           <hr></hr>
           <p>The BirdWatch Observatory is a joint effort from the teams at <a href="https://www.eurecom.fr/">EURECOM</a> and at <a href="https://www.uq.edu.au/">University of Queensland</a>. A technical paper

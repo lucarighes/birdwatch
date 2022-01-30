@@ -123,17 +123,17 @@ def newsearch(term):
     return json.dumps(tuple(data[0:100]))
 
 
-@app.route("/api/search/<term>")
-def search(term):
-    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-    mydb = myclient["birdwatchdb"]
-    mycol = mydb["notes"]
-
-    data = {}
-    for x in mycol.find({'$text': {'$search': term}}, {'tweetId':1, 'summary':1}):
-        data[x.get('tweetId')] = x.get('summary')
-    
-    return json.loads(json_util.dumps(data))
+#@app.route("/api/search/<term>")
+#def search(term):
+#    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+#    mydb = myclient["birdwatchdb"]
+#    mycol = mydb["notes"]
+#
+#    data = {}
+#    for x in mycol.find({'$text': {'$search': term}}, {'tweetId':1, 'summary':1}):
+#        data[x.get('tweetId')] = x.get('summary')
+#    
+#    return json.loads(json_util.dumps(data))
 
 
 @app.route("/api/searchfact/<id>")

@@ -124,13 +124,19 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .form{
-    margin-left: 25%;
+    margin-left: 15%;
   }
 
   .form-button {
     margin-top: 5%;
     width: 8%;
     min-width: 100px;
+  }
+
+  .form-check {
+    margin-top: 55%;
+    margin-left: 30%;
+    width: 100px;
   }
 
   .graph {
@@ -247,6 +253,11 @@ export const GlobalStyles = createGlobalStyle`
 
 .display_button {
   margin: 1%;
+}
+
+checkLabel {
+  display: flex;
+  align-items: center;
 }
 `
 

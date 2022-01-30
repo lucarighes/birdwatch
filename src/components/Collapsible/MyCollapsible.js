@@ -12,10 +12,15 @@ const MyCollapsible = (response) => {
   const factor = 10;
 
   var res = [];
+  var temp = [];
+  var f = response['factcheck'];
 
+
+  console.log(response);
   useEffect(() => {setRespointer(factor);}, [response])
 
   for (let [key, value] of Object.entries(response)) {
+      res = [];
       for (let [key1, value1] of Object.entries(response[key])) {
         if(value1[5]["NOT_MISLEADING"] == value1[5]["MISINFORMED_OR_POTENTIALLY_MISLEADING"]){
           value1.push({'notes':0});
@@ -34,7 +39,7 @@ const MyCollapsible = (response) => {
           }   
         });
         items.sort((first, second) => { return second[1] - first[1] });
-        if(items[0][1] == 0){
+        if(items[0][1] == 0 || items[0][0] == ''){
           value1.push({'facts': 3});
         }
         else{
@@ -51,8 +56,19 @@ const MyCollapsible = (response) => {
             }
           }
         }
-        res.push(value1);
+        temp.push(value1);
       }
+      temp.forEach(e => {
+        if(f == 0){
+          res.push(e);
+        }
+        else {
+          if(e[8]['facts'] != 3){
+            res.push(e);
+          }
+        }
+      })
+
   }
   
 
@@ -68,28 +84,32 @@ const MyCollapsible = (response) => {
   useEffect(() => {
     if(id.length > 0){
       var ul = document.getElementById("note_"+id);
-      ul.innerHTML = '';
+      if(ul != null){
+        ul.innerHTML = '';
 
-      for (let [key, value] of Object.entries(note)) {
-        if(key == "data"){
-          for(let [key1, value1] of Object.entries(value)){
-              var li = document.createElement("li");
-              li.appendChild(document.createTextNode(value1[0] + ": " + value1[1])); 
-              ul.appendChild(li);
+        for (let [key, value] of Object.entries(note)) {
+          if(key == "data"){
+            for(let [key1, value1] of Object.entries(value)){
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(value1[0] + ": " + value1[1])); 
+                ul.appendChild(li);
+            }
           }
+          
         }
-        
       }
 
       var ul = document.getElementById("fact_"+id);
-      ul.innerHTML = '';
+      if(ul != null){
+        ul.innerHTML = '';
 
-      for (let [key, value] of Object.entries(fact)) {
-        if(key == "data"){
-          for(let [key1, value1] of Object.entries(value)){
-              var li = document.createElement("li");
-              li.appendChild(document.createTextNode(value1[0] + ": " + value1[1])); 
-              ul.appendChild(li);
+        for (let [key, value] of Object.entries(fact)) {
+          if(key == "data"){
+            for(let [key1, value1] of Object.entries(value)){
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(value1[0] + ": " + value1[1])); 
+                ul.appendChild(li);
+            }
           }
         }
       }
@@ -107,7 +127,6 @@ const MyCollapsible = (response) => {
     e.preventDefault();
     setRespointer(e.target.value*factor);
   };
-
 
   return (
       <div>
