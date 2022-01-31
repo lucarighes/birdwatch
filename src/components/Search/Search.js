@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Collapsible from '../Collapsible/index.js';
@@ -11,7 +11,7 @@ const Search = () => {
     const [bar, setBar] = useState([]);
     const [word, setWord] = useState([]);
     const [factcheck, setFactcheck] = useState(0);
-
+    const mycheck = useRef();
 
     const {state} = useLocation();
     const { words } = state;
@@ -41,6 +41,8 @@ const Search = () => {
 
     function handleOnSubmit(e){
       e.preventDefault();
+      mycheck.current.checked = false;
+      setFactcheck(0);
       setWord(bar);
     };
 
@@ -56,7 +58,7 @@ const Search = () => {
                 Submit
               </Button>
               <Form.Group controlId="formBasicCheckbox">
-                 <Form.Check type="checkbox" className="form-check" label="Only facts" onClick={handleCheck}/>
+                 <Form.Check type="checkbox" ref={mycheck} className="form-check" label="Only facts" onClick={handleCheck}/>
               </Form.Group>
 
             </Form>

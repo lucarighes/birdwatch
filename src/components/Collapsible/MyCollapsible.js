@@ -107,7 +107,7 @@ const MyCollapsible = (response) => {
           if(key == "data"){
             for(let [key1, value1] of Object.entries(value)){
                 var li = document.createElement("li");
-                li.appendChild(document.createTextNode(value1[0] + ": " + value1[1])); 
+                li.appendChild(document.createTextNode(value1[0] + ": " + value1[1].split('[')[1].split(']')[0].slice(1, -1))); 
                 ul.appendChild(li);
             }
           }
