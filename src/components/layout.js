@@ -22,9 +22,7 @@ const Layout = () => {
             <Router basename="/">      
                 <Routes>
                   <Route path="/" element={<Main />} />
-                  <Route path="/graphquantitytrend" element={<GraphQuantityTrend />} />
                   <Route path="/graphtopics" element={<GraphTopics />} />
-                  <Route path="/about" element={<About />} />
                   <Route path="/search" element={<Search />} />
                 </Routes>
             </Router>

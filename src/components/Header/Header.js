@@ -10,7 +10,6 @@ const Header = () => {
             <NavCenter><a href="../">BirdWatch Observatory</a></NavCenter>
             <NavRight> 
                 <a href="../graphtopics">Filter data</a>
-                <a href="../about">About</a>
             </NavRight>
             
           </NavHeader>
