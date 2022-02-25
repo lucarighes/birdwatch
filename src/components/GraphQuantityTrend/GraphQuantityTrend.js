@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer, AxisLabel } from 'recharts';
 
-const GraphQuantityTrend = () => {
+const GraphQuantityTrend = (filter) => {
     const [data, setData] = useState();
 
     useEffect(() => {
-      fetch('/api/graphcount')
+      fetch('/api/graphcount/' + filter)
       .then(res => res.json())
       .then(data => setData(data))
       .catch(error => console.log(error));
     }, []);
-
 
     return (
       <React.Fragment>

@@ -259,5 +259,11 @@ checkLabel {
   display: flex;
   align-items: center;
 }
+
+.menu {
+  margin-left: 45%;
+  margin-top: 130%;
+  margin-right: 5%;
+}
 `
 

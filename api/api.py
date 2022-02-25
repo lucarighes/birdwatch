@@ -4,7 +4,7 @@ from flask_pymongo import PyMongo
 from bson import json_util
 import pymongo, sys
 from script.TimeGraph import compute
-
+from script.generateImages import generateImages
 
 
 app = Flask(__name__, static_folder="../build", static_url_path="/")
@@ -15,8 +15,8 @@ mongo = PyMongo(app)
 def index():
     return app.send_static_file("index.html")
 
-@app.route("/api/graphcount")
-def home_page():
+@app.route("/api/graphcount/<topic>")
+def home_page(topic):
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     mydb = myclient["birdwatchdb"]
     mycol = mydb["notes"]
@@ -29,9 +29,9 @@ def home_page():
     return json.dumps(res) 
 
 
-@app.route("/api/graphtopics")
-def graph_topics():
-    return home_page()
+@app.route("/api/graphtopics/<topic>")
+def graph_topics(topic):
+    return home_page(topic)
 
 
 @app.route("/api/notefacts/<notes>/<facts>")
@@ -123,18 +123,6 @@ def newsearch(term):
     return json.dumps(tuple(data[0:100]))
 
 
-#@app.route("/api/search/<term>")
-#def search(term):
-#    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-#    mydb = myclient["birdwatchdb"]
-#    mycol = mydb["notes"]
-#
-#    data = {}
-#    for x in mycol.find({'$text': {'$search': term}}, {'tweetId':1, 'summary':1}):
-#        data[x.get('tweetId')] = x.get('summary')
-#    
-#    return json.loads(json_util.dumps(data))
-
 
 @app.route("/api/searchfact/<id>")
 def searchfact(id):
@@ -174,6 +162,12 @@ def searchnote(id):
     data['data'] = raw;
 
     return json.loads(json_util.dumps(data))
+
+
+@app.route("/api/generateimg")
+def generateimg():
+    data = generateImages(["1352754599590035459"])
+    return json.dumps(tuple(data))
 
 
 if __name__ == "__main__":
