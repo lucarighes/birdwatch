@@ -106,21 +106,26 @@ def notefactstat():
 
 @app.route("/api/newsearch/<term>")
 def newsearch(term):
+    number_of_items = 20
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     mydb = myclient["birdwatchdb"]
     mycol = mydb["tweets"]
 
     data = []
+    ids = []
     for x in mycol.find({'$text': {'$search': term}}, {'id_str':1, 'full_text':1, 'created_at':1, 'favorite_count':1, 'retweet_count':1}).sort([('retweet_count', pymongo.DESCENDING), ('favorite_count', pymongo.DESCENDING)]):
         date = x.get('created_at').split();
         data.append([x.get('id_str'), x.get('full_text'), str(date[2])+ ' ' + str(date[1])+ ' ' +str(date[5]), x.get('favorite_count'), x.get('retweet_count')])
+        ids.append(x.get('id_str'))
 
-    data = data[0:100]
+    data = data[0:number_of_items]
+    path = generateImages(ids[0:number_of_items])
     for elem in data:
         elem.append(searchnote(elem[0]))
         elem.append(searchfact(elem[0]))
+        elem.append(path + elem[0] + ".png")
 
-    return json.dumps(tuple(data[0:100]))
+    return json.dumps(tuple(data[0:20]))
 
 
 
@@ -164,10 +169,9 @@ def searchnote(id):
     return json.loads(json_util.dumps(data))
 
 
-@app.route("/api/generateimg")
-def generateimg():
-    data = generateImages(["1352754599590035459"])
-    return json.dumps(tuple(data))
+
+def generateimg(id_list):
+    return generateImages(id_list)
 
 
 if __name__ == "__main__":

@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Collapsible from '../Collapsible/index.js';
+import CollapsibleNew from '../CollapsibleNew/index.js';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
