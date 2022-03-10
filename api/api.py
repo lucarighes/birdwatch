@@ -2,9 +2,10 @@ from __future__ import print_function
 from flask import Flask, jsonify, json, send_from_directory
 from flask_pymongo import PyMongo
 from bson import json_util
-import pymongo, sys
+import pymongo, sys, time
 from script.TimeGraph import compute
 from script.generateImages import generateImages
+from os import path
 
 
 app = Flask(__name__, static_folder="../build", static_url_path="/")
@@ -119,11 +120,18 @@ def newsearch(term):
         ids.append(x.get('id_str'))
 
     data = data[0:number_of_items]
-    path = generateImages(ids[0:number_of_items])
+    path = generateimg(ids[0:number_of_items])
+
+    #time.sleep(2)
+    #final = []
     for elem in data:
+        #r = check(path, elem[0])
+        #print(r)
+        #if  r == "true":
         elem.append(searchnote(elem[0]))
         elem.append(searchfact(elem[0]))
         elem.append(path + elem[0] + ".png")
+        #    final.append(elem)
 
     return json.dumps(tuple(data[0:20]))
 
@@ -168,6 +176,15 @@ def searchnote(id):
 
     return json.loads(json_util.dumps(data))
 
+
+@app.route('/api/images/<path>/<filename>')
+def serve_image(path, filename):
+    return send_from_directory("./temp/" + path, filename)
+
+
+@app.route('/api/check/<path1>/<filename>')
+def check(path1, filename):
+    return str(path.exists("./temp/" + path1 + "/" + filename))
 
 
 def generateimg(id_list):
